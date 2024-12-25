@@ -10,6 +10,18 @@ module.exports = {
         '^@types/(.*)$': '<rootDir>/src/types/$1'
     },
     transform: {
-        '^.+\\.tsx?$': 'ts-jest',
-    },
+        '^.+\\.tsx?$': ['ts-jest', {
+            tsconfig: 'tsconfig.json',
+            babelConfig: {
+                presets: [
+                    '@babel/preset-env',
+                    '@babel/preset-react',
+                    '@babel/preset-typescript'
+                ],
+                plugins: [
+                    'babel-plugin-styled-components'
+                ]
+            }
+        }]
+    }
 };
