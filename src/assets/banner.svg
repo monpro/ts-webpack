@@ -1,0 +1,5 @@
+<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+    <rect width="300" height="100" fill="#2196F3"/>
+    <polygon points="0,100 100,0 200,100" fill="#1565C0" opacity="0.5"/>
+    <text x="150" y="60" font-size="24" text-anchor="middle" fill="white">Welcome to TypeScript</text>
+</svg>
