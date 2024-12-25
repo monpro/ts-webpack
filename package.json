@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve --mode development",
-    "build": "webpack --mode production",
+    "start": "webpack serve --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "analyze": "webpack --config webpack.analyze.js",
     "test": "jest",
     "test:watch": "jest --watch"
   },
@@ -17,15 +18,22 @@
     "@testing-library/react": "^16.1.0",
     "@types/jest": "^29.5.14",
     "@types/node": "^22.10.2",
+    "compression-webpack-plugin": "^11.1.0",
+    "css-loader": "^7.1.2",
     "html-webpack-plugin": "^5.6.3",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
+    "mini-css-extract-plugin": "^2.9.2",
+    "style-loader": "^4.0.0",
+    "terser-webpack-plugin": "^5.3.11",
     "ts-jest": "^29.2.5",
     "ts-loader": "^9.5.1",
     "tsconfig-paths-webpack-plugin": "^4.2.0",
     "typescript": "^5.7.2",
     "webpack": "^5.97.1",
+    "webpack-bundle-analyzer": "^4.10.2",
     "webpack-cli": "^6.0.1",
-    "webpack-dev-server": "^5.2.0"
+    "webpack-dev-server": "^5.2.0",
+    "webpack-merge": "^6.0.1"
   }
 }
